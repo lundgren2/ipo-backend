@@ -2,6 +2,14 @@
   "routes": [
     {
       "method": "GET",
+      "path": "/podcasts/import",
+      "handler": "podcast.import",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/podcasts",
       "handler": "podcast.find",
       "config": {

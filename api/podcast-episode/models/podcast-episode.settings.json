@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "podcasts",
+  "collectionName": "podcast_episodes",
   "info": {
-    "name": "Podcast"
+    "name": "Podcast Episode"
   },
   "options": {
     "increments": true,
@@ -10,8 +10,13 @@
   },
   "attributes": {
     "title": {
-      "type": "string",
-      "required": true
+      "type": "string"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "summary": {
+      "type": "text"
     },
     "cover": {
       "model": "file",
@@ -24,14 +29,19 @@
       "plugin": "upload",
       "required": false
     },
-    "descriptionHtml": {
-      "type": "richtext"
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.link"
     },
     "description": {
       "type": "text"
     },
-    "podcast_episodes": {
-      "collection": "podcast-episode"
+    "descriptionHtml": {
+      "type": "richtext"
+    },
+    "podcast": {
+      "model": "podcast"
     },
     "coverUrl": {
       "type": "string"
