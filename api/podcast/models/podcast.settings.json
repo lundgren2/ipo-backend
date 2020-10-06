@@ -24,13 +24,13 @@
       "plugin": "upload",
       "required": false
     },
-    "descriptionHtml": {
+    "description": {
       "type": "richtext"
     },
-    "description": {
+    "summary": {
       "type": "text"
     },
-    "podcast_episodes": {
+    "podcastEpisodes": {
       "collection": "podcast-episode"
     },
     "coverUrl": {

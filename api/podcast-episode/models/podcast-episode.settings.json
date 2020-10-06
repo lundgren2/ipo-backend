@@ -29,15 +29,7 @@
       "plugin": "upload",
       "required": false
     },
-    "links": {
-      "type": "component",
-      "repeatable": true,
-      "component": "general.link"
-    },
     "description": {
-      "type": "text"
-    },
-    "descriptionHtml": {
       "type": "richtext"
     },
     "podcast": {

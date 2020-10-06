@@ -1,7 +1,8 @@
 'use strict';
 
-const slugify = require('slugify');
 const getJsonFromXml = require('../../../lib/xml2json');
+const toMarkdown = require('../../../lib/html2markdown');
+const slugify = require('../../../lib/slugify');
 
 const RSS_URL = 'https://rss.acast.com';
 
@@ -44,6 +45,13 @@ function getCoverUrl(data) {
   return data.image.url._text;
 }
 
+function parseDescription(unformattedDescription) {
+  const descMd = toMarkdown(unformattedDescription);
+  const delimiterIndex = descMd.indexOf('Support');
+  const description = descMd.substring(0, delimiterIndex);
+  return description;
+}
+
 /**
  * Add podcast if it doesn't already exist
  *
@@ -65,9 +73,9 @@ async function addPodcast(podcast) {
 
   const podcastObject = {
     title,
+    description: parseDescription(podcast.description._cdata),
     slug: slugify(title),
-    description: podcast['itunes:summary']._text,
-    descriptionHtml: podcast.description._cdata,
+    summary: podcast['itunes:summary']._text,
     website: podcast.link._text,
     links,
     coverUrl,
@@ -92,7 +100,7 @@ async function parseEpisodes(episodes) {
         slug: slugify(title),
         summary: episode['itunes:subtitle']._text,
         date: new Date(episode.pubDate._text),
-        description: episode['itunes:summary']._text,
+        description: parseDescription(episode.description._cdata),
         link: episode.link._text,
         coverUrl: episode['itunes:image']._attributes.href,
       };
@@ -133,6 +141,7 @@ async function addEpisodes(episodesData) {
 }
 
 module.exports = async (podcastName) => {
+  await deleteAllEpisodes();
   // Insert Podcast
   const podcast = await fetchDataForPodcast(podcastName);
   await addPodcast(podcast);
@@ -148,16 +157,16 @@ module.exports = async (podcastName) => {
   });
 };
 
-// async function deleteAllEpisodes() {
-//   const episodeQuery = strapi.query('podcast-episode');
-//   const allEpisodes = await episodeQuery.find({ _limit: 5 });
+async function deleteAllEpisodes() {
+  const episodeQuery = strapi.query('podcast-episode');
+  const allEpisodes = await episodeQuery.find({ _limit: 500 });
 
-//   allEpisodes.forEach(async (episode) => {
-//     console.log(`Delete ${episode.id}`);
-//     try {
-//       await episodeQuery.delete({ id: episode.id });
-//     } catch (err) {
-//       console.error(err);
-//     }
-//   });
-// }
+  allEpisodes.forEach(async (episode) => {
+    console.log(`Delete ${episode.id}`);
+    try {
+      await episodeQuery.delete({ id: episode.id });
+    } catch (err) {
+      console.error(err);
+    }
+  });
+}
