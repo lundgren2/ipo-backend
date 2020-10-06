@@ -12,18 +12,20 @@
   "devDependencies": {},
   "dependencies": {
     "axios": "^0.20.0",
-    "knex": "0.21.5",
+    "knex": "0.21.6",
+    "slugify": "^1.4.5",
     "sqlite3": "latest",
-    "strapi": "3.1.6",
-    "strapi-admin": "3.1.6",
-    "strapi-connector-bookshelf": "3.1.6",
-    "strapi-plugin-content-manager": "3.1.6",
-    "strapi-plugin-content-type-builder": "3.1.6",
-    "strapi-plugin-email": "3.1.6",
-    "strapi-plugin-graphql": "3.1.6",
-    "strapi-plugin-upload": "3.1.6",
-    "strapi-plugin-users-permissions": "3.1.6",
-    "strapi-utils": "3.1.6"
+    "strapi": "3.1.7",
+    "strapi-admin": "3.1.7",
+    "strapi-connector-bookshelf": "3.1.7",
+    "strapi-plugin-content-manager": "3.1.7",
+    "strapi-plugin-content-type-builder": "3.1.7",
+    "strapi-plugin-email": "3.1.7",
+    "strapi-plugin-graphql": "3.1.7",
+    "strapi-plugin-upload": "3.1.7",
+    "strapi-plugin-users-permissions": "3.1.7",
+    "strapi-utils": "3.1.7",
+    "xml-js": "^1.6.11"
   },
   "author": {
     "name": "A Strapi developer"
