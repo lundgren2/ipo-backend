@@ -1,6 +1,6 @@
 const axios = require('axios');
-const path = require('path');
 const fs = require('fs');
+const path = require('path');
 
 module.exports = async (url) => {
   // get the filename such as `image01.jpg`
