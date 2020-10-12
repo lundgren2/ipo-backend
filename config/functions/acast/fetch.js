@@ -45,9 +45,12 @@ function getCoverUrl(data) {
   return data.image.url._text;
 }
 
-function parseDescription(unformattedDescription) {
+function parseDescription(unformattedDescription, delimiter) {
   const descMd = toMarkdown(unformattedDescription);
-  const delimiterIndex = descMd.indexOf('Support');
+  if (!delimiter) {
+    return descMd;
+  }
+  const delimiterIndex = descMd.indexOf(delimiter);
   const description = descMd.substring(0, delimiterIndex);
   return description;
 }
@@ -114,7 +117,7 @@ async function parseEpisodes(episodes, podcastId) {
       slug: slugify(title),
       summary: episode['itunes:subtitle']._text,
       date: new Date(episode.pubDate._text),
-      description: parseDescription(episode.description._cdata),
+      description: parseDescription(episode.description._cdata, '---'),
       link: episode.link._text,
       coverUrl: episode['itunes:image']._attributes.href,
       // TODO: check how to link podcast
@@ -148,7 +151,7 @@ async function addEpisodes(episodesData, podcastId) {
 }
 
 module.exports = async (podcastName) => {
-  await deleteAllEpisodes();
+  // await deleteAllEpisodes();
 
   // Insert Podcast
   const podcast = await fetchDataForPodcast(podcastName);
