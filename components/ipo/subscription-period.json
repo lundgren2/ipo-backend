@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_ipo_subscription_periods",
+  "info": {
+    "name": "subscription_period",
+    "icon": "calendar-alt"
+  },
+  "options": {},
+  "attributes": {
+    "from": {
+      "type": "date"
+    },
+    "to": {
+      "type": "date"
+    }
+  }
+}
