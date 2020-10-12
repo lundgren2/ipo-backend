@@ -58,17 +58,17 @@ function parseDescription(unformattedDescription) {
  * @param {string} podcast
  */
 async function addPodcast(podcast) {
-  const episodeQuery = strapi.query('podcast-episode');
+  const podcastQuery = strapi.query('podcast');
   const links = parseLinks(podcast);
   const coverUrl = getCoverUrl(podcast);
   const title = podcast.title._text;
 
-  const isAlreadyAdded = await episodeQuery.findOne({
+  const isAlreadyAdded = await podcastQuery.findOne({
     title,
   });
 
-  if (isAlreadyAdded) {
-    return;
+  if (!!isAlreadyAdded) {
+    return isAlreadyAdded.id;
   }
 
   const podcastObject = {
@@ -82,7 +82,8 @@ async function addPodcast(podcast) {
   };
 
   console.log(`Adding podcast ${podcastObject.title} to strapi`);
-  await episodeQuery.create(podcastObject);
+  const insertedPodcast = await podcastQuery.create(podcastObject);
+  return insertedPodcast.id;
 }
 
 /**
@@ -91,65 +92,73 @@ async function addPodcast(podcast) {
  * @param {Object} episodes
  * @returns {Object} Object that includes {title, slug, summary, date, description, link and coverUrl}
  */
-async function parseEpisodes(episodes) {
-  const parsedEpisodes = episodes
-    .map((episode) => {
-      const title = episode.title._text;
-      return {
-        title,
-        slug: slugify(title),
-        summary: episode['itunes:subtitle']._text,
-        date: new Date(episode.pubDate._text),
-        description: parseDescription(episode.description._cdata),
-        link: episode.link._text,
-        coverUrl: episode['itunes:image']._attributes.href,
-      };
-    })
-    .reverse();
-
-  return parsedEpisodes;
-}
-
-/**
- * Iterates over all episodes and parses it and then add if episode.
- * Is not added.
- *
- * @param {Object} episodesData - Unparsed episode data
- */
-async function addEpisodes(episodesData) {
+async function parseEpisodes(episodes, podcastId) {
   const episodeQuery = strapi.query('podcast-episode');
-  const episodes = await parseEpisodes(episodesData);
-  let insertedEpisodes = [];
+  let podcastEpisodes = [];
 
-  // Insert each element that doesn't exist
+  // TODO: Check latest added episode and only add episodes after that
+  // to optimize this function.
   for await (const episode of episodes) {
-    // TODO: Check latest added episode and only add episodes after that
-    // to optimize this function
+    const title = episode.title._text;
+
     const isAlreadyAdded = await episodeQuery.findOne({
-      title: episode.title,
+      title,
     });
+
     if (isAlreadyAdded) {
       continue;
     }
 
-    console.log(`Adding ${episode.title}`);
-    await episodeQuery.create(episode);
-    insertedEpisodes.push(episode.title);
+    const podcastEpisode = {
+      title,
+      slug: slugify(title),
+      summary: episode['itunes:subtitle']._text,
+      date: new Date(episode.pubDate._text),
+      description: parseDescription(episode.description._cdata),
+      link: episode.link._text,
+      coverUrl: episode['itunes:image']._attributes.href,
+      // TODO: check how to link podcast
+      podcast: podcastId,
+    };
+
+    podcastEpisodes.push(podcastEpisode);
   }
 
-  return insertedEpisodes;
+  return podcastEpisodes.reverse();
+}
+
+/**
+ * Iterates over all episodes and parses it and then add if episode
+ * isn't added
+ *
+ * @param {Object} episodesData - Unparsed episode data
+ * @returns {Object[]} Array with the inserted episodes
+ */
+async function addEpisodes(episodesData, podcastId) {
+  const episodeQuery = strapi.query('podcast-episode');
+  const episodes = await parseEpisodes(episodesData, podcastId);
+
+  // Insert each element that doesn't exist
+  for await (const episode of episodes) {
+    console.log(`Adding ${episode.title}`);
+    await episodeQuery.create(episode);
+  }
+
+  return episodes;
 }
 
 module.exports = async (podcastName) => {
   await deleteAllEpisodes();
+
   // Insert Podcast
   const podcast = await fetchDataForPodcast(podcastName);
-  await addPodcast(podcast);
+  const podcastId = await addPodcast(podcast);
+  console.log('podcast ID: ', podcastId);
 
   // TODO: Move this logic to `podcast-episodes`
   // Insert Podcast Episodes
   const episodes = podcast.item;
-  const insertedEpisodes = await addEpisodes(episodes);
+  const insertedEpisodes = await addEpisodes(episodes, podcast.id);
 
   return JSON.stringify({
     totalInsertedEpisodes: insertedEpisodes.length,
