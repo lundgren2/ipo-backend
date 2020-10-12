@@ -26,7 +26,7 @@
     "strapi-plugin-upload": "3.2.3",
     "strapi-plugin-users-permissions": "3.2.3",
     "strapi-utils": "3.2.3",
-    "turndown": "^6.0.0",
+    "turndown": "^7.0.0",
     "xml-js": "^1.6.11"
   },
   "author": {
