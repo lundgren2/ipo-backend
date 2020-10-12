@@ -1,0 +1,129 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ipos",
+  "info": {
+    "name": "IPO"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "date": {
+      "type": "datetime",
+      "required": false
+    },
+    "slug": {
+      "type": "string"
+    },
+    "about_company": {
+      "type": "text"
+    },
+    "interview": {
+      "type": "string"
+    },
+    "sector": {
+      "type": "enumeration",
+      "enum": [
+        "Finans",
+        "Teknik",
+        "Industri",
+        "Konsument"
+      ]
+    },
+    "volume": {
+      "type": "decimal"
+    },
+    "first_trading_day": {
+      "type": "date"
+    },
+    "subscription_period": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ipo.subscription-period"
+    },
+    "price_per_share": {
+      "type": "decimal"
+    },
+    "pre_money_valuation": {
+      "type": "biginteger"
+    },
+    "min_subscription": {
+      "type": "integer"
+    },
+    "prospectus": {
+      "type": "string"
+    },
+    "hemsida": {
+      "type": "string",
+      "default": "https://",
+      "regex": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)"
+    },
+    "branch": {
+      "type": "enumeration",
+      "enum": [
+        "software",
+        "hardware",
+        "medical"
+      ]
+    },
+    "guaranteed": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "country": {
+      "type": "enumeration",
+      "enum": [
+        "SE",
+        "DK",
+        "NO",
+        "FI",
+        "DE",
+        "NL"
+      ]
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.link"
+    },
+    "featured_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "logotype": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
