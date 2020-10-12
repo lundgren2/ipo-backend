@@ -33,7 +33,8 @@
       "type": "richtext"
     },
     "podcast": {
-      "model": "podcast"
+      "model": "podcast",
+      "via": "podcastEpisodes"
     },
     "coverUrl": {
       "type": "string"

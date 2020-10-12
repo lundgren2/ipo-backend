@@ -31,6 +31,7 @@
       "type": "text"
     },
     "podcastEpisodes": {
+      "via": "podcast",
       "collection": "podcast-episode"
     },
     "coverUrl": {
