@@ -1,5 +1,5 @@
 {
-  "name": "my-project",
+  "name": "ipo-se-backend",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -30,7 +30,7 @@
     "xml-js": "^1.6.11"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Tobias Lundgren <tobias@lundgren.tech>"
   },
   "strapi": {
     "uuid": "9b82fde0-c483-4106-8629-6b725feb0f12"
