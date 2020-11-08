@@ -70,7 +70,7 @@ async function addPodcast(podcast) {
     title,
   });
 
-  if (!!isAlreadyAdded) {
+  if (isAlreadyAdded) {
     return isAlreadyAdded.id;
   }
 
@@ -169,14 +169,15 @@ module.exports = async (podcastName) => {
   });
 };
 
+// eslint-disable-next-line no-unused-vars
 async function deleteAllEpisodes() {
   const episodeQuery = strapi.query('podcast-episode');
-  const allEpisodes = await episodeQuery.find({ _limit: 500 });
+  const allEpisodes = await episodeQuery.find({_limit: 500});
 
   allEpisodes.forEach(async (episode) => {
     console.log(`Delete ${episode.id}`);
     try {
-      await episodeQuery.delete({ id: episode.id });
+      await episodeQuery.delete({id: episode.id});
     } catch (err) {
       console.error(err);
     }

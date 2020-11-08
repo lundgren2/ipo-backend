@@ -11,7 +11,7 @@ module.exports = async (url) => {
   // create an instance of fs.writeStream
   const writeStream = fs.createWriteStream(filePath);
   // make a GET request and create a readStream to the resource
-  const { data } = await axios.get(url, { responseType: 'stream' });
+  const {data} = await axios.get(url, {responseType: 'stream'});
 
   // pipe the data we receive to the writeStream
   data.pipe(writeStream);

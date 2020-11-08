@@ -14,7 +14,6 @@
   "dependencies": {
     "axios": "^0.21.0",
     "knex": "0.21.12",
-    "prettier": "^2.1.2",
     "slugify": "^1.4.5",
     "sqlite3": "latest",
     "strapi": "3.2.5",
@@ -31,7 +30,8 @@
     "xml-js": "^1.6.11"
   },
   "devDependencies": {
-    "eslint-config-prettier": "^6.15.0"
+    "eslint-config-prettier": "^6.15.0",
+    "prettier": "^2.1.2"
   },
   "author": {
     "name": "Tobias Lundgren <tobias@lundgren.tech>"

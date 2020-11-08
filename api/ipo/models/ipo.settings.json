@@ -30,12 +30,7 @@
     },
     "sector": {
       "type": "enumeration",
-      "enum": [
-        "Finans",
-        "Teknik",
-        "Industri",
-        "Konsument"
-      ]
+      "enum": ["Finans", "Teknik", "Industri", "Konsument"]
     },
     "volume": {
       "type": "decimal"
@@ -67,11 +62,7 @@
     },
     "branch": {
       "type": "enumeration",
-      "enum": [
-        "software",
-        "hardware",
-        "medical"
-      ]
+      "enum": ["software", "hardware", "medical"]
     },
     "guaranteed": {
       "type": "string"
@@ -81,14 +72,7 @@
     },
     "country": {
       "type": "enumeration",
-      "enum": [
-        "SE",
-        "DK",
-        "NO",
-        "FI",
-        "DE",
-        "NL"
-      ]
+      "enum": ["SE", "DK", "NO", "FI", "DE", "NL"]
     },
     "links": {
       "type": "component",
@@ -98,30 +82,21 @@
     "featured_image": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images",
-        "videos"
-      ],
+      "allowedTypes": ["images", "videos"],
       "plugin": "upload",
       "required": false
     },
     "images": {
       "collection": "file",
       "via": "related",
-      "allowedTypes": [
-        "files",
-        "images",
-        "videos"
-      ],
+      "allowedTypes": ["files", "images", "videos"],
       "plugin": "upload",
       "required": false
     },
     "logotype": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "plugin": "upload",
       "required": false
     }
