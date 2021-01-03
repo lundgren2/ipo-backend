@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "name": "Page",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "slug": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "excerpt": {
+      "type": "text"
+    },
+    "publish_date": {
+      "type": "datetime"
+    },
+    "published": {
+      "type": "boolean"
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "permission"
+    },
+    "original_date": {
+      "type": "datetime"
+    },
+    "wp_id": {
+      "type": "biginteger"
+    },
+    "tag": {
+      "model": "tag",
+      "via": "pages"
+    }
+  }
+}

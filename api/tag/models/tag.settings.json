@@ -18,6 +18,10 @@
     "posts": {
       "collection": "post",
       "via": "tag"
+    },
+    "pages": {
+      "via": "tag",
+      "collection": "page"
     }
   }
 }
