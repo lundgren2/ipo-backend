@@ -2,11 +2,13 @@
   "kind": "collectionType",
   "collectionName": "ipos",
   "info": {
-    "name": "IPO"
+    "name": "IPO",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": true
   },
   "attributes": {
     "title": {
@@ -55,7 +57,7 @@
     "prospectus": {
       "type": "string"
     },
-    "hemsida": {
+    "website": {
       "type": "string",
       "default": "https://",
       "regex": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)"
