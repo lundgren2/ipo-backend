@@ -16,8 +16,8 @@
       "type": "string"
     },
     "posts": {
-      "collection": "post",
-      "via": "tag"
+      "via": "tag",
+      "collection": "post"
     },
     "pages": {
       "via": "tag",

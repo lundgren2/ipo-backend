@@ -2,11 +2,13 @@
   "kind": "collectionType",
   "collectionName": "posts",
   "info": {
-    "name": "Post"
+    "name": "Post",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "title": {
@@ -16,8 +18,8 @@
       "type": "richtext"
     },
     "categories": {
-      "via": "post",
-      "collection": "category"
+      "collection": "category",
+      "via": "post"
     },
     "slug": {
       "type": "string"
@@ -27,10 +29,6 @@
     },
     "publish_date": {
       "type": "datetime"
-    },
-    "published": {
-      "type": "boolean",
-      "default": true
     },
     "author": {
       "plugin": "users-permissions",
@@ -45,13 +43,17 @@
     "feature_image": {
       "model": "file",
       "via": "related",
-      "allowedTypes": ["images", "files", "videos"],
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
       "plugin": "upload",
       "required": false
     },
     "tag": {
-      "via": "posts",
-      "model": "tag"
+      "model": "tag",
+      "via": "posts"
     }
   }
 }

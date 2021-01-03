@@ -26,9 +26,6 @@
     "publish_date": {
       "type": "datetime"
     },
-    "published": {
-      "type": "boolean"
-    },
     "author": {
       "plugin": "users-permissions",
       "model": "permission"
