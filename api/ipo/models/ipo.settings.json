@@ -17,22 +17,18 @@
     "body": {
       "type": "richtext"
     },
-    "date": {
+    "publish_date": {
       "type": "datetime",
       "required": false
     },
     "slug": {
       "type": "string"
     },
-    "about_company": {
+    "summary": {
       "type": "text"
     },
     "interview": {
       "type": "string"
-    },
-    "sector": {
-      "type": "enumeration",
-      "enum": ["Finans", "Teknik", "Industri", "Konsument"]
     },
     "volume": {
       "type": "decimal"
@@ -48,7 +44,7 @@
     "price_per_share": {
       "type": "decimal"
     },
-    "pre_money_valuation": {
+    "pre_money": {
       "type": "biginteger"
     },
     "min_subscription": {
@@ -62,10 +58,6 @@
       "default": "https://",
       "regex": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)"
     },
-    "branch": {
-      "type": "enumeration",
-      "enum": ["software", "hardware", "medical"]
-    },
     "guaranteed": {
       "type": "string"
     },
@@ -74,7 +66,15 @@
     },
     "country": {
       "type": "enumeration",
-      "enum": ["SE", "DK", "NO", "FI", "DE", "NL"]
+      "enum": [
+        "SE",
+        "DK",
+        "NO",
+        "FI",
+        "DE",
+        "NL",
+        "ISL"
+      ]
     },
     "links": {
       "type": "component",
@@ -84,23 +84,72 @@
     "featured_image": {
       "model": "file",
       "via": "related",
-      "allowedTypes": ["images", "videos"],
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
       "plugin": "upload",
       "required": false
     },
     "images": {
       "collection": "file",
       "via": "related",
-      "allowedTypes": ["files", "images", "videos"],
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
       "plugin": "upload",
       "required": false
     },
     "logotype": {
       "model": "file",
       "via": "related",
-      "allowedTypes": ["images"],
+      "allowedTypes": [
+        "images"
+      ],
       "plugin": "upload",
       "required": false
+    },
+    "subscribe_buttons": {
+      "type": "boolean",
+      "default": true
+    },
+    "market": {
+      "type": "enumeration",
+      "enum": [
+        "first_north",
+        "first_north_premier",
+        "spotlight",
+        "ngm_nordic_mtf",
+        "ngm_sme",
+        "nasdaq_omx_stockholm",
+        "nasdaq_mid_cap",
+        "nasdaq_small_cap",
+        "alternativa_listan",
+        "pepins"
+      ]
+    },
+    "sector": {
+      "type": "string"
+    },
+    "currency": {
+      "type": "enumeration",
+      "enum": [
+        "SEK",
+        "DKK",
+        "EUR",
+        "GBP",
+        "NOK",
+        "USD",
+        "ISK"
+      ]
+    },
+    "subscription_commitment": {
+      "type": "string"
+    },
+    "post_money": {
+      "type": "string"
     }
   }
 }
