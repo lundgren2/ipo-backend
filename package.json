@@ -5,6 +5,8 @@
   "description": "A Strapi application",
   "scripts": {
     "dev": "strapi develop",
+    "docker:build": "docker build . -t ipo-backend",
+    "docker:run": "docker run -it --rm ipo-backend",
     "start": "strapi start",
     "build": "strapi build",
     "lint": "eslint . --ext .js",
@@ -13,9 +15,11 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "knex": "0.21.15",
+    "knex": "^0.21.14",
+    "pg": "8.4.0",
+    "prettier": "^2.2.1",
     "slugify": "^1.4.5",
-    "sqlite3": "latest",
+    "sqlite3": "5.0.1",
     "strapi": "3.4.1",
     "strapi-admin": "3.4.1",
     "strapi-connector-bookshelf": "3.4.1",
@@ -30,18 +34,13 @@
     "xml-js": "^1.6.11"
   },
   "devDependencies": {
-    "eslint-config-prettier": "^7.1.0",
-    "prettier": "^2.2.1"
+    "eslint-config-prettier": "^7.1.0"
   },
   "author": {
     "name": "Tobias Lundgren <tobias@lundgren.tech>"
   },
   "strapi": {
     "uuid": "9b82fde0-c483-4106-8629-6b725feb0f12"
-  },
-  "engines": {
-    "node": ">=10.0.0",
-    "npm": ">=6.0.0"
   },
   "license": "MIT"
 }
