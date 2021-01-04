@@ -25,7 +25,7 @@
       "type": "string"
     },
     "excerpt": {
-      "type": "string"
+      "type": "text"
     },
     "publish_date": {
       "type": "datetime"
@@ -43,7 +43,11 @@
     "feature_image": {
       "model": "file",
       "via": "related",
-      "allowedTypes": ["images", "files", "videos"],
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
       "plugin": "upload",
       "required": false
     },
