@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "strapi develop",
     "docker:build": "docker build . -t ipo-backend",
-    "docker:run": "docker run -it --rm ipo-backend",
+    "docker:run": "docker run -it --rm -p 1337:1337 ipo-backend",
     "start": "strapi start",
     "build": "strapi build",
     "lint": "eslint . --ext .js",
