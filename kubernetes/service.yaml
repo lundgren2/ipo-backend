@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: ipo-backend
+spec:
+  selector:
+    app: ipo-backend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 1337

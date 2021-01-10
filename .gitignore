@@ -70,6 +70,7 @@ $RECYCLE.BIN/
 *.sql
 *.sqlite
 *.sqlite3
+data
 
 
 ############################
@@ -112,3 +113,9 @@ exports
 *.cache
 build
 .strapi-updater.json
+
+############################
+# Kubernetes
+#############################
+
+kubernetes/secrets.yaml

@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ipo-backend
+  labels:
+    app: ipo-backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ipo-backend
+  template:
+    metadata:
+      labels:
+        app: ipo-backend
+    spec:
+      containers:
+        - name: ipo-backend
+          image: lundgren2/ipo-backend
+          imagePullPolicy: Always
+          env:
+            - name: DATABASE_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: ipo-backend-secret
+                  key: DATABASE_HOST
+            - name: DATABASE_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: ipo-backend-secret
+                  key: DATABASE_NAME
+            - name: DATABASE_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: ipo-backend-secret
+                  key: DATABASE_USERNAME
+            - name: DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: ipo-backend-secret
+                  key: DATABASE_PASSWORD
+            - name: DATABASE_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: ipo-backend-secret
+                  key: DATABASE_PORT
