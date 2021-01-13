@@ -25,7 +25,6 @@ jobs:
         with:
           push: true
           tags: lundgren2/ipo-backend:latest
-          labels: $(git rev-parse --short ${{ github.sha }})
 
       - name: Set up kubectl
         uses: matootie/dokube@v1.3.4

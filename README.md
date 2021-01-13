@@ -1,5 +1,7 @@
 # IPO.se backend
 
+![ci](https://github.com/lundgren2/ipo-backend/workflows/ci/badge.svg)
+
 ## Getting Started
 
 1. Clone repo.
