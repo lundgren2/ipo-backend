@@ -15,11 +15,11 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "knex": "^0.21.14",
+    "knex": "^0.21.16",
     "pg": "8.5.1",
     "prettier": "^2.2.1",
     "slugify": "^1.4.5",
-    "sqlite3": "5.0.1",
+    "sqlite3": "^5.0.1",
     "strapi": "3.4.3",
     "strapi-admin": "3.4.3",
     "strapi-connector-bookshelf": "3.4.3",
