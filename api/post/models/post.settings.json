@@ -19,7 +19,8 @@
     },
     "categories": {
       "collection": "category",
-      "via": "post"
+      "via": "posts",
+      "dominant": true
     },
     "slug": {
       "type": "string"
@@ -51,9 +52,23 @@
       "plugin": "upload",
       "required": false
     },
-    "tag": {
-      "model": "tag",
-      "via": "posts"
+    "tags": {
+      "collection": "tag",
+      "via": "posts",
+      "dominant": true
+    },
+    "companies": {
+      "via": "posts",
+      "collection": "companies"
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "article_url": {
+      "type": "string"
+    },
+    "pdf_url": {
+      "type": "string"
     }
   }
 }

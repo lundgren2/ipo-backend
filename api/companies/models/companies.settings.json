@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "companies",
+  "info": {
+    "name": "Companies",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "name": {
+      "type": "string"
+    },
+    "categories": {
+      "collection": "category",
+      "via": "companies",
+      "dominant": true
+    },
+    "ipo": {
+      "model": "ipo"
+    },
+    "podcast_episodes": {
+      "collection": "podcast-episode",
+      "via": "companies",
+      "dominant": true
+    },
+    "posts": {
+      "collection": "post",
+      "via": "companies",
+      "dominant": true
+    },
+    "media": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "about": {
+      "type": "text"
+    },
+    "industry": {
+      "type": "string"
+    },
+    "sector": {
+      "type": "string"
+    }
+  }
+}

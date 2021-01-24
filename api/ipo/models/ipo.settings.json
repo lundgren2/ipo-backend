@@ -45,7 +45,7 @@
       "type": "decimal"
     },
     "pre_money": {
-      "type": "biginteger"
+      "type": "integer"
     },
     "min_subscription": {
       "type": "integer"
@@ -66,48 +66,31 @@
     },
     "country": {
       "type": "enumeration",
-      "enum": [
-        "SE",
-        "DK",
-        "NO",
-        "FI",
-        "DE",
-        "NL",
-        "ISL"
-      ]
+      "enum": ["SE", "DK", "NO", "FI", "DE", "NL", "ISL"]
     },
     "links": {
       "type": "component",
       "repeatable": true,
       "component": "general.link"
     },
-    "featured_image": {
+    "feature_image": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images",
-        "videos"
-      ],
+      "allowedTypes": ["images", "videos"],
       "plugin": "upload",
       "required": false
     },
     "images": {
       "collection": "file",
       "via": "related",
-      "allowedTypes": [
-        "files",
-        "images",
-        "videos"
-      ],
+      "allowedTypes": ["files", "images", "videos"],
       "plugin": "upload",
       "required": false
     },
     "logotype": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "plugin": "upload",
       "required": false
     },
@@ -135,21 +118,16 @@
     },
     "currency": {
       "type": "enumeration",
-      "enum": [
-        "SEK",
-        "DKK",
-        "EUR",
-        "GBP",
-        "NOK",
-        "USD",
-        "ISK"
-      ]
+      "enum": ["SEK", "DKK", "EUR", "GBP", "NOK", "USD", "ISK"]
     },
     "subscription_commitment": {
       "type": "string"
     },
     "post_money": {
       "type": "string"
+    },
+    "wp_id": {
+      "type": "integer"
     }
   }
 }

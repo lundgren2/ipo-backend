@@ -34,11 +34,18 @@
       "type": "datetime"
     },
     "wp_id": {
-      "type": "biginteger"
+      "type": "integer"
     },
     "tag": {
       "model": "tag",
       "via": "pages"
+    },
+    "feature_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": ["images", "files", "videos"],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

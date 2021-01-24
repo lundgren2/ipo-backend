@@ -15,9 +15,13 @@
     "title": {
       "type": "string"
     },
-    "post": {
+    "posts": {
       "via": "categories",
-      "model": "post"
+      "collection": "post"
+    },
+    "companies": {
+      "via": "categories",
+      "collection": "companies"
     }
   }
 }
