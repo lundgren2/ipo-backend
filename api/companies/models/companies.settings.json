@@ -14,24 +14,20 @@
     "logo": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
+      "allowedTypes": ["images"],
       "plugin": "upload",
       "required": false
+    },
+    "country": {
+      "type": "enumeration",
+      "enum": ["SE", "DK", "NO", "FI", "DE", "NL", "ISL"]
     },
     "name": {
       "type": "string"
     },
-    "categories": {
-      "collection": "category",
-      "via": "companies",
-      "dominant": true
-    },
     "ipo": {
-      "model": "ipo"
+      "model": "ipo",
+      "via": "company"
     },
     "podcast_episodes": {
       "collection": "podcast-episode",
@@ -43,14 +39,25 @@
       "via": "companies",
       "dominant": true
     },
+    "market": {
+      "type": "enumeration",
+      "enum": [
+        "first_north",
+        "first_north_premier",
+        "spotlight",
+        "ngm_nordic_mtf",
+        "ngm_sme",
+        "nasdaq_omx_stockholm",
+        "nasdaq_mid_cap",
+        "nasdaq_small_cap",
+        "alternativa_listan",
+        "pepins"
+      ]
+    },
     "media": {
       "collection": "file",
       "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
+      "allowedTypes": ["images", "files", "videos"],
       "plugin": "upload",
       "required": false
     },
@@ -60,8 +67,24 @@
     "industry": {
       "type": "string"
     },
+    "interview": {
+      "type": "string"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.link"
+    },
     "sector": {
       "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string",
+      "default": "https://",
+      "regex": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)"
     }
   }
 }

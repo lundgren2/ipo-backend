@@ -24,12 +24,6 @@
     "slug": {
       "type": "string"
     },
-    "summary": {
-      "type": "text"
-    },
-    "interview": {
-      "type": "string"
-    },
     "volume": {
       "type": "decimal"
     },
@@ -53,20 +47,8 @@
     "prospectus": {
       "type": "string"
     },
-    "website": {
-      "type": "string",
-      "default": "https://",
-      "regex": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)"
-    },
     "guaranteed": {
       "type": "string"
-    },
-    "twitter": {
-      "type": "string"
-    },
-    "country": {
-      "type": "enumeration",
-      "enum": ["SE", "DK", "NO", "FI", "DE", "NL", "ISL"]
     },
     "links": {
       "type": "component",
@@ -87,34 +69,9 @@
       "plugin": "upload",
       "required": false
     },
-    "logotype": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": ["images"],
-      "plugin": "upload",
-      "required": false
-    },
     "subscribe_buttons": {
       "type": "boolean",
       "default": true
-    },
-    "market": {
-      "type": "enumeration",
-      "enum": [
-        "first_north",
-        "first_north_premier",
-        "spotlight",
-        "ngm_nordic_mtf",
-        "ngm_sme",
-        "nasdaq_omx_stockholm",
-        "nasdaq_mid_cap",
-        "nasdaq_small_cap",
-        "alternativa_listan",
-        "pepins"
-      ]
-    },
-    "sector": {
-      "type": "string"
     },
     "currency": {
       "type": "enumeration",
@@ -128,6 +85,10 @@
     },
     "wp_id": {
       "type": "integer"
+    },
+    "company": {
+      "via": "ipo",
+      "model": "companies"
     }
   }
 }

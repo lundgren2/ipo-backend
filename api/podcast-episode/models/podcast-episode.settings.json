@@ -22,7 +22,11 @@
     "cover": {
       "model": "file",
       "via": "related",
-      "allowedTypes": ["images", "files", "videos"],
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
       "plugin": "upload",
       "required": false
     },
@@ -38,6 +42,10 @@
     },
     "slug": {
       "type": "string"
+    },
+    "companies": {
+      "via": "podcast_episodes",
+      "collection": "companies"
     }
   }
 }

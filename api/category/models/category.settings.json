@@ -18,10 +18,6 @@
     "posts": {
       "via": "categories",
       "collection": "post"
-    },
-    "companies": {
-      "via": "categories",
-      "collection": "companies"
     }
   }
 }
