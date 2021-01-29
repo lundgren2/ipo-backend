@@ -18,8 +18,8 @@
       "type": "richtext"
     },
     "categories": {
-      "collection": "category",
       "via": "posts",
+      "collection": "category",
       "dominant": true
     },
     "slug": {
@@ -27,9 +27,6 @@
     },
     "excerpt": {
       "type": "text"
-    },
-    "publish_date": {
-      "type": "datetime"
     },
     "author": {
       "plugin": "users-permissions",
@@ -41,14 +38,10 @@
     "wp_id": {
       "type": "integer"
     },
-    "feature_image": {
+    "image": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
+      "allowedTypes": ["images", "videos"],
       "plugin": "upload",
       "required": false
     },
@@ -58,8 +51,8 @@
       "dominant": true
     },
     "companies": {
-      "via": "posts",
-      "collection": "companies"
+      "collection": "companies",
+      "via": "posts"
     },
     "publisher": {
       "type": "string"

@@ -17,12 +17,9 @@
     "body": {
       "type": "richtext"
     },
-    "publish_date": {
-      "type": "datetime",
-      "required": false
-    },
     "slug": {
-      "type": "string"
+      "type": "string",
+      "unique": true
     },
     "volume": {
       "type": "decimal"
@@ -55,17 +52,10 @@
       "repeatable": true,
       "component": "general.link"
     },
-    "feature_image": {
+    "image": {
       "model": "file",
       "via": "related",
       "allowedTypes": ["images", "videos"],
-      "plugin": "upload",
-      "required": false
-    },
-    "images": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": ["files", "images", "videos"],
       "plugin": "upload",
       "required": false
     },
@@ -87,8 +77,8 @@
       "type": "integer"
     },
     "company": {
-      "via": "ipo",
-      "model": "companies"
+      "model": "companies",
+      "via": "ipo"
     }
   }
 }

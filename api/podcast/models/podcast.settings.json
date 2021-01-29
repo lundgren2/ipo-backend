@@ -6,7 +6,8 @@
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "title": {
@@ -26,15 +27,16 @@
     "summary": {
       "type": "text"
     },
-    "podcastEpisodes": {
-      "via": "podcast",
-      "collection": "podcast-episode"
+    "podcast_episodes": {
+      "collection": "podcast-episode",
+      "via": "podcast"
     },
-    "coverUrl": {
+    "cover_url": {
       "type": "string"
     },
     "slug": {
-      "type": "string"
+      "type": "string",
+      "unique": true
     }
   }
 }

@@ -23,15 +23,9 @@
     "excerpt": {
       "type": "text"
     },
-    "publish_date": {
-      "type": "datetime"
-    },
     "author": {
       "plugin": "users-permissions",
       "model": "permission"
-    },
-    "original_date": {
-      "type": "datetime"
     },
     "wp_id": {
       "type": "integer"
@@ -40,10 +34,12 @@
       "model": "tag",
       "via": "pages"
     },
-    "feature_image": {
+    "image": {
       "model": "file",
       "via": "related",
-      "allowedTypes": ["images", "files", "videos"],
+      "allowedTypes": [
+        "images"
+      ],
       "plugin": "upload",
       "required": false
     }

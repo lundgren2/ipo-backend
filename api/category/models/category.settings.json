@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "categories",
   "info": {
-    "name": "Category"
+    "name": "Category",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -10,14 +11,15 @@
   },
   "attributes": {
     "slug": {
-      "type": "string"
+      "type": "string",
+      "unique": true
     },
     "title": {
       "type": "string"
     },
     "posts": {
-      "via": "categories",
-      "collection": "post"
+      "collection": "post",
+      "via": "categories"
     }
   }
 }

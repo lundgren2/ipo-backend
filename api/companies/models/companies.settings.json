@@ -8,35 +8,45 @@
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
     "logo": {
       "model": "file",
       "via": "related",
-      "allowedTypes": ["images"],
+      "allowedTypes": [
+        "images"
+      ],
       "plugin": "upload",
       "required": false
     },
     "country": {
       "type": "enumeration",
-      "enum": ["SE", "DK", "NO", "FI", "DE", "NL", "ISL"]
+      "enum": [
+        "SE",
+        "DK",
+        "NO",
+        "FI",
+        "DE",
+        "NL",
+        "ISL"
+      ]
     },
     "name": {
       "type": "string"
     },
     "ipo": {
-      "model": "ipo",
-      "via": "company"
+      "via": "company",
+      "model": "ipo"
     },
     "podcast_episodes": {
-      "collection": "podcast-episode",
       "via": "companies",
+      "collection": "podcast-episode",
       "dominant": true
     },
     "posts": {
-      "collection": "post",
       "via": "companies",
+      "collection": "post",
       "dominant": true
     },
     "market": {
@@ -57,7 +67,11 @@
     "media": {
       "collection": "file",
       "via": "related",
-      "allowedTypes": ["images", "files", "videos"],
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
       "plugin": "upload",
       "required": false
     },
