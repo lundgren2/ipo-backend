@@ -63,7 +63,7 @@ function parseDescription(unformattedDescription, delimiter) {
 async function addPodcast(podcast) {
   const podcastQuery = strapi.query('podcast');
   const links = parseLinks(podcast);
-  const coverUrl = getCoverUrl(podcast);
+  const cover_url = getCoverUrl(podcast);
   const title = podcast.title._text;
 
   const isAlreadyAdded = await podcastQuery.findOne({
@@ -81,7 +81,7 @@ async function addPodcast(podcast) {
     summary: podcast['itunes:summary']._text,
     website: podcast.link._text,
     links,
-    coverUrl,
+    cover_url,
   };
 
   console.log(`Adding podcast ${podcastObject.title} to strapi`);
@@ -119,9 +119,8 @@ async function parseEpisodes(episodes, podcastId) {
       date: new Date(episode.pubDate._text),
       description: parseDescription(episode.description._cdata, '---'),
       link: episode.link._text,
-      coverUrl: episode['itunes:image']._attributes.href,
-      // TODO: check how to link podcast
-      podcast: podcastId,
+      cover_url: episode['itunes:image']._attributes.href,
+      podcast: {id: podcastId},
     };
 
     podcastEpisodes.push(podcastEpisode);
@@ -161,7 +160,7 @@ module.exports = async (podcastName) => {
   // TODO: Move this logic to `podcast-episodes`
   // Insert Podcast Episodes
   const episodes = podcast.item;
-  const insertedEpisodes = await addEpisodes(episodes, podcast.id);
+  const insertedEpisodes = addEpisodes(episodes, podcastId);
 
   return JSON.stringify({
     totalInsertedEpisodes: insertedEpisodes.length,
