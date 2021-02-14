@@ -18,8 +18,8 @@
       "type": "string"
     },
     "posts": {
-      "collection": "post",
-      "via": "categories"
+      "via": "categories",
+      "collection": "post"
     }
   }
 }
