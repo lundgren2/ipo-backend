@@ -12,14 +12,15 @@
   },
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "body": {
       "type": "richtext"
     },
     "categories": {
-      "via": "posts",
       "collection": "category",
+      "via": "posts",
       "dominant": true
     },
     "slug": {
@@ -54,7 +55,7 @@
       "collection": "companies",
       "via": "posts"
     },
-    "publisher": {
+    "source": {
       "type": "string"
     },
     "article_url": {
@@ -62,6 +63,11 @@
     },
     "pdf_url": {
       "type": "string"
+    },
+    "source_id": {
+      "type": "string",
+      "private": false,
+      "unique": true
     }
   }
 }
