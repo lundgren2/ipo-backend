@@ -62,3 +62,10 @@ This repo uses CD/CI through GitHub actions.
 - Podcast Episodes `/podcast-episodes`
 - Tags `/tags`
 - Categories `/categories`
+
+## Upgrade
+
+1. Run `yarn upgrade-interactive --latest` and select all Strapi dependencies.
+2. Stop server if running.
+3. Run `yarn build --clean` to rebuild your administration panel with latest Strapi.
+4. ✨ Done. Start server again.

@@ -15,26 +15,26 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "knex": "^0.21.17",
+    "knex": "^0.95.4",
     "pg": "8.5.1",
     "prettier": "^2.2.1",
-    "slugify": "^1.4.5",
-    "sqlite3": "^5.0.1",
-    "strapi": "3.4.6",
-    "strapi-admin": "3.4.6",
-    "strapi-connector-bookshelf": "3.4.6",
-    "strapi-plugin-content-manager": "3.4.6",
-    "strapi-plugin-content-type-builder": "3.4.6",
-    "strapi-plugin-email": "3.4.6",
-    "strapi-plugin-graphql": "3.4.6",
-    "strapi-plugin-upload": "3.4.6",
-    "strapi-plugin-users-permissions": "3.4.6",
-    "strapi-utils": "3.4.6",
+    "slugify": "^1.5.0",
+    "sqlite3": "^5.0.2",
+    "strapi": "3.5.4",
+    "strapi-admin": "3.5.4",
+    "strapi-connector-bookshelf": "3.5.4",
+    "strapi-plugin-content-manager": "3.5.4",
+    "strapi-plugin-content-type-builder": "3.5.4",
+    "strapi-plugin-email": "3.5.4",
+    "strapi-plugin-graphql": "3.5.4",
+    "strapi-plugin-upload": "3.5.4",
+    "strapi-plugin-users-permissions": "3.5.4",
+    "strapi-utils": "3.5.4",
     "turndown": "^7.0.0",
     "xml-js": "^1.6.11"
   },
   "devDependencies": {
-    "eslint-config-prettier": "^7.2.0"
+    "eslint-config-prettier": "^8.1.0"
   },
   "author": {
     "name": "Tobias Lundgren <tobias@lundgren.tech>"
