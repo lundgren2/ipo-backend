@@ -44,3 +44,18 @@ spec:
                 secretKeyRef:
                   name: ipo-backend-secret
                   key: DATABASE_PORT
+            - name: CLOUDINARY_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: ipo-cloudinary-secret
+                  key: CLOUDINARY_NAME
+            - name: CLOUDINARY_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: ipo-cloudinary-secret
+                  key: CLOUDINARY_KEY
+            - name: CLOUDINARY_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: ipo-cloudinary-secret
+                  key: CLOUDINARY_SECRET
