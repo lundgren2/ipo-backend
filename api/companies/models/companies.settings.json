@@ -44,11 +44,6 @@
       "collection": "podcast-episode",
       "dominant": true
     },
-    "posts": {
-      "via": "companies",
-      "collection": "post",
-      "dominant": true
-    },
     "market": {
       "type": "enumeration",
       "enum": [
@@ -99,6 +94,10 @@
       "type": "string",
       "default": "https://",
       "regex": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)"
+    },
+    "posts": {
+      "via": "company",
+      "collection": "post"
     }
   }
 }
