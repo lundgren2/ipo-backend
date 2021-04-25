@@ -5,7 +5,7 @@ metadata:
   labels:
     app: ipo-backend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: ipo-backend
@@ -18,6 +18,13 @@ spec:
         - name: ipo-backend
           image: lundgren2/ipo-backend
           imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: '500m'
+              memory: 1Gi
+            limits:
+              cpu: '2'
+              memory: 3Gi
           env:
             - name: DATABASE_HOST
               valueFrom:
