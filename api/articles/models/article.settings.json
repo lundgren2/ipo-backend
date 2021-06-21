@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "posts",
+  "collectionName": "articles",
   "info": {
-    "name": "Post",
+    "name": "Article",
     "description": ""
   },
   "options": {
@@ -20,7 +20,7 @@
     },
     "categories": {
       "collection": "category",
-      "via": "posts",
+      "via": "articles",
       "dominant": true
     },
     "slug": {
@@ -33,7 +33,7 @@
       "plugin": "users-permissions",
       "model": "user"
     },
-    "original_date": {
+    "date": {
       "type": "datetime"
     },
     "wp_id": {
@@ -42,22 +42,15 @@
     "image": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images",
-        "videos"
-      ],
+      "allowedTypes": ["images", "videos"],
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
     },
     "tags": {
       "collection": "tag",
-      "via": "posts",
+      "via": "articles",
       "dominant": true
-    },
-    "company": {
-      "model": "companies",
-      "via": "posts"
     },
     "source": {
       "type": "string"
@@ -72,6 +65,16 @@
       "type": "string",
       "private": false,
       "unique": true
+    },
+    "companies": {
+      "via": "articles",
+      "collection": "companies"
+    },
+    "sponsored": {
+      "type": "boolean"
+    },
+    "featured": {
+      "type": "boolean"
     }
   }
 }

@@ -17,9 +17,9 @@
     "title": {
       "type": "string"
     },
-    "posts": {
+    "articles": {
       "via": "categories",
-      "collection": "post"
+      "collection": "article"
     }
   }
 }

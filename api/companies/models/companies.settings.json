@@ -14,23 +14,14 @@
     "logo": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {}
     },
     "country": {
       "type": "enumeration",
-      "enum": [
-        "SE",
-        "DK",
-        "NO",
-        "FI",
-        "DE",
-        "NL",
-        "ISL"
-      ]
+      "enum": ["SE", "DK", "NO", "FI", "DE", "NL", "ISL"]
     },
     "name": {
       "type": "string"
@@ -62,13 +53,10 @@
     "media": {
       "collection": "file",
       "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
+      "allowedTypes": ["images", "files", "videos"],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {}
     },
     "about": {
       "type": "text"
@@ -95,9 +83,10 @@
       "default": "https://",
       "regex": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)"
     },
-    "posts": {
-      "via": "company",
-      "collection": "post"
+    "articles": {
+      "via": "companies",
+      "collection": "article",
+      "dominant": true
     }
   }
 }
