@@ -27,11 +27,6 @@
     "first_trading_day": {
       "type": "date"
     },
-    "subscription_period": {
-      "type": "component",
-      "repeatable": false,
-      "component": "ipo.subscription-period"
-    },
     "price_per_share": {
       "type": "decimal"
     },
@@ -97,6 +92,12 @@
     },
     "sponsored": {
       "type": "boolean"
+    },
+    "subscription_period_from": {
+      "type": "datetime"
+    },
+    "subscription_period_to": {
+      "type": "datetime"
     }
   }
 }
