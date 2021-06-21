@@ -19,9 +19,9 @@
       "via": "tag",
       "collection": "page"
     },
-    "posts": {
+    "articles": {
       "via": "tags",
-      "collection": "post"
+      "collection": "article"
     }
   }
 }

@@ -57,7 +57,8 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {}
     },
     "subscribe_buttons": {
       "type": "boolean",
@@ -85,11 +86,17 @@
       "type": "integer"
     },
     "company": {
-      "model": "companies",
-      "via": "ipo"
+      "via": "ipo",
+      "model": "companies"
     },
     "pre_money": {
       "type": "string"
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "sponsored": {
+      "type": "boolean"
     }
   }
 }

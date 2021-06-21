@@ -23,7 +23,9 @@
     "image": {
       "model": "file",
       "via": "related",
-      "allowedTypes": ["images"],
+      "allowedTypes": [
+        "images"
+      ],
       "plugin": "upload",
       "required": false
     },
@@ -37,8 +39,8 @@
       "type": "string"
     },
     "companies": {
-      "collection": "companies",
-      "via": "podcast_episodes"
+      "via": "podcast_episodes",
+      "collection": "companies"
     },
     "podcast": {
       "via": "podcast_episodes",
