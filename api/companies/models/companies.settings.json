@@ -103,6 +103,15 @@
     },
     "slug": {
       "type": "string"
+    },
+    "ticker": {
+      "type": "string"
+    },
+    "org_nr": {
+      "type": "string"
+    },
+    "isin": {
+      "type": "string"
     }
   }
 }
