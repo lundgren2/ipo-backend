@@ -1,5 +1,7 @@
 'use strict';
 
+const axios = require('axios');
+
 /**
  * Cron config that gives you an opportunity
  * to run scheduled jobs.
@@ -12,10 +14,14 @@
 
 module.exports = {
   /**
-   * Simple example.
-   * Every monday at 1am.
+   * Update articles.
+   * Every minute.
    */
-  // '0 1 * * 1': () => {
-  //
-  // }
+  '*/1 * * * *': async () => {
+    try {
+      await axios.get('http://ipo-news-updater/import/articles');
+    } catch (error) {
+      console.error(error);
+    }
+  },
 };
