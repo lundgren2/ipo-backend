@@ -31,7 +31,7 @@
       "type": "decimal"
     },
     "min_subscription": {
-      "type": "integer"
+      "type": "decimal"
     },
     "prospectus": {
       "type": "string"
@@ -74,18 +74,12 @@
     "subscription_commitment": {
       "type": "string"
     },
-    "post_money": {
-      "type": "string"
-    },
     "wp_id": {
       "type": "integer"
     },
     "company": {
       "via": "ipo",
       "model": "companies"
-    },
-    "pre_money": {
-      "type": "string"
     },
     "featured": {
       "type": "boolean"
@@ -98,6 +92,12 @@
     },
     "subscription_period_to": {
       "type": "datetime"
+    },
+    "pre_money": {
+      "type": "decimal"
+    },
+    "post_money": {
+      "type": "decimal"
     }
   }
 }
