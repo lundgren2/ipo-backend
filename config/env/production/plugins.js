@@ -4,11 +4,14 @@ module.exports = ({env}) => ({
     dsn: 'https://f091ea00b30c4368b807caf475404bc0@o473428.ingest.sentry.io/5936188',
   },
   upload: {
-    provider: 'cloudinary',
+    provider: 'do',
     providerOptions: {
-      cloud_name: env('CLOUDINARY_NAME'),
-      api_key: env('CLOUDINARY_KEY'),
-      api_secret: env('CLOUDINARY_SECRET'),
+      key: env('DO_SPACE_ACCESS_KEY'),
+      secret: env('DO_SPACE_SECRET_KEY'),
+      endpoint: 'fra1.digitaloceanspaces.com',
+      space: 'ipo-cdn',
+      directory: 'v1',
+      cdn: 'cdn.ipo.se',
     },
   },
 });
