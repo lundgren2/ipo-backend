@@ -19,7 +19,8 @@
     },
     "articles": {
       "via": "categories",
-      "collection": "article"
+      "collection": "article",
+      "autoPopulate": false
     }
   }
 }
