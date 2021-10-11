@@ -14,11 +14,11 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "knex": "^0.95.10",
+    "axios": "^0.22.0",
+    "knex": "^0.95.11",
     "pg": "8.7.1",
-    "prettier": "^2.3.2",
-    "slugify": "^1.6.0",
+    "prettier": "^2.4.1",
+    "slugify": "^1.6.1",
     "sqlite3": "^5.0.2",
     "strapi": "3.6.8",
     "strapi-admin": "3.6.8",
