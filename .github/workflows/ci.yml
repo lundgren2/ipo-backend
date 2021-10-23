@@ -10,4 +10,4 @@ jobs:
       - run: |
           yarn
           yarn build
-          yarn lint
+          yarn prettier

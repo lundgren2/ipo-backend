@@ -7,7 +7,7 @@
     "dev": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "fix": "prettier . --write",
+    "prettier": "prettier . --check",
     "strapi": "strapi"
   },
   "dependencies": {
