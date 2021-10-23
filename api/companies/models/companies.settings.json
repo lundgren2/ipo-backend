@@ -14,24 +14,14 @@
     "logo": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
     },
     "country": {
       "type": "enumeration",
-      "enum": [
-        "SE",
-        "DK",
-        "NO",
-        "FI",
-        "DE",
-        "NL",
-        "ISL"
-      ]
+      "enum": ["SE", "DK", "NO", "FI", "DE", "NL", "ISL"]
     },
     "name": {
       "type": "string"
@@ -64,11 +54,7 @@
     "media": {
       "collection": "file",
       "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
+      "allowedTypes": ["images", "files", "videos"],
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
