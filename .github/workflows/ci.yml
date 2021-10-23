@@ -1,8 +1,5 @@
 name: ci
-
-on:
-  push:
-    branches: main
+on: 'push'
 
 jobs:
   main:
@@ -10,29 +7,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
-
-      - name: Login to DockerHub
-        uses: docker/login-action@v1
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Build and push
-        uses: docker/build-push-action@v2
-        with:
-          push: true
-          tags: lundgren2/ipo-backend:latest
-
-      - name: Set up kubectl
-        uses: matootie/dokube@v1.3.4
-        with:
-          personalAccessToken: ${{ secrets.DIGITALOCEAN_TOKEN }}
-          version: 1.19.3
-          clusterName: ipo
-
-      - name: Update deployment
-        run: kubectl patch deployment ipo-backend -p \
-          "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"build\":\"$(git rev-parse --short ${{ github.sha }})\"}}}}}}"
+      - run: |
+          yarn
+          yarn build
+          yarn lint
