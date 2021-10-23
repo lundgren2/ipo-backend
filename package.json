@@ -11,7 +11,7 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "axios": "^0.22.0",
+    "axios": "^0.23.0",
     "knex": "^0.95.11",
     "pg": "8.7.1",
     "pg-connection-string": "^2.5.0",
