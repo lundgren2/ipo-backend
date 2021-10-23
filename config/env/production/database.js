@@ -1,7 +1,7 @@
 const parse = require('pg-connection-string').parse;
 
 module.exports = ({env}) => {
-  const config = parse(env.DATABASE_URL ?? '');
+  const config = parse(env.DATABASE_URL || '');
   if (!config) return {};
   return {
     defaultConnection: 'default',
