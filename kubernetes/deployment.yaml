@@ -5,7 +5,6 @@ metadata:
   labels:
     app: ipo-backend
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: ipo-backend
@@ -18,13 +17,13 @@ spec:
         - name: ipo-backend
           image: lundgren2/ipo-backend
           imagePullPolicy: Always
-          resources:
-            requests:
-              cpu: '500m'
-              memory: 500Mi
-            limits:
-              cpu: '2'
-              memory: 3Gi
+          # resources:
+          #   requests:
+          #     cpu: '500m'
+          #     memory: 500Mi
+          #   limits:
+          #     cpu: '1'
+          #     memory: 2Gi
           env:
             - name: DATABASE_HOST
               valueFrom:
@@ -51,6 +50,16 @@ spec:
                 secretKeyRef:
                   name: ipo-backend-secret
                   key: DATABASE_PORT
+            - name: DO_SPACE_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: ipo-backend-secret
+                  key: DO_SPACE_ACCESS_KEY
+            - name: DO_SPACE_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: ipo-backend-secret
+                  key: DO_SPACE_SECRET_KEY
             - name: CLOUDINARY_NAME
               valueFrom:
                 secretKeyRef:

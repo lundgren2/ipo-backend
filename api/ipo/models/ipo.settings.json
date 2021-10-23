@@ -47,10 +47,7 @@
     "image": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images",
-        "videos"
-      ],
+      "allowedTypes": ["images", "videos"],
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
@@ -61,15 +58,7 @@
     },
     "currency": {
       "type": "enumeration",
-      "enum": [
-        "SEK",
-        "DKK",
-        "EUR",
-        "GBP",
-        "NOK",
-        "USD",
-        "ISK"
-      ]
+      "enum": ["SEK", "DKK", "EUR", "GBP", "NOK", "USD", "ISK"]
     },
     "subscription_commitment": {
       "type": "string"
