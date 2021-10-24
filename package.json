@@ -7,11 +7,14 @@
     "dev": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
+    "format": "prettier --write .",
     "prettier": "prettier . --check",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "prepare": "husky install"
   },
   "dependencies": {
     "axios": "^0.23.0",
+    "husky": "^7.0.4",
     "knex": "^0.95.11",
     "pg": "8.7.1",
     "pg-connection-string": "^2.5.0",
