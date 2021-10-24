@@ -31,7 +31,7 @@
       "description": "Staging server"
     },
     {
-      "url": "YOUR_PRODUCTION_SERVER",
+      "url": "https://api.ipo.se",
       "description": "Production server"
     }
   ],
