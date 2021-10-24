@@ -47,9 +47,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - Role"
-        ],
+        "tags": ["UsersPermissions - Role"],
         "parameters": [
           {
             "name": "id",
@@ -114,9 +112,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - Role"
-        ],
+        "tags": ["UsersPermissions - Role"],
         "parameters": [
           {
             "name": "_limit",
@@ -302,9 +298,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - Role"
-        ],
+        "tags": ["UsersPermissions - Role"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -365,9 +359,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - Role"
-        ],
+        "tags": ["UsersPermissions - Role"],
         "parameters": [
           {
             "name": "role",
@@ -442,9 +434,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "UsersPermissions - Role"
-        ],
+        "tags": ["UsersPermissions - Role"],
         "parameters": [
           {
             "name": "role",
@@ -463,10 +453,7 @@
   "components": {
     "schemas": {
       "UsersPermissionsRole": {
-        "required": [
-          "id",
-          "name"
-        ],
+        "required": ["id", "name"],
         "properties": {
           "id": {
             "type": "string"
@@ -484,13 +471,7 @@
           "permissions": {
             "type": "array",
             "items": {
-              "required": [
-                "id",
-                "type",
-                "controller",
-                "action",
-                "enabled"
-              ],
+              "required": ["id", "type", "controller", "action", "enabled"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -525,11 +506,7 @@
           "users": {
             "type": "array",
             "items": {
-              "required": [
-                "id",
-                "username",
-                "email"
-              ],
+              "required": ["id", "username", "email"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -570,9 +547,7 @@
         }
       },
       "NewUsersPermissionsRole": {
-        "required": [
-          "name"
-        ],
+        "required": ["name"],
         "properties": {
           "name": {
             "type": "string",

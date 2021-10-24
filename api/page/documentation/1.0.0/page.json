@@ -50,9 +50,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Page"
-        ],
+        "tags": ["Page"],
         "parameters": [
           {
             "name": "_limit",
@@ -238,9 +236,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Page"
-        ],
+        "tags": ["Page"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -305,9 +301,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Page"
-        ],
+        "tags": ["Page"],
         "parameters": []
       }
     },
@@ -358,9 +352,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Page"
-        ],
+        "tags": ["Page"],
         "parameters": [
           {
             "name": "id",
@@ -420,9 +412,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Page"
-        ],
+        "tags": ["Page"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -494,9 +484,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Page"
-        ],
+        "tags": ["Page"],
         "parameters": [
           {
             "name": "id",
@@ -515,9 +503,7 @@
   "components": {
     "schemas": {
       "Page": {
-        "required": [
-          "id"
-        ],
+        "required": ["id"],
         "properties": {
           "id": {
             "type": "string"
@@ -535,13 +521,7 @@
             "type": "string"
           },
           "author": {
-            "required": [
-              "id",
-              "type",
-              "controller",
-              "action",
-              "enabled"
-            ],
+            "required": ["id", "type", "controller", "action", "enabled"],
             "properties": {
               "id": {
                 "type": "string"
@@ -576,9 +556,7 @@
             "type": "integer"
           },
           "tag": {
-            "required": [
-              "id"
-            ],
+            "required": ["id"],
             "properties": {
               "id": {
                 "type": "string"

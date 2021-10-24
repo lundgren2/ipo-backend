@@ -51,9 +51,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Podcast-episode"
-        ],
+        "tags": ["Podcast-episode"],
         "parameters": [
           {
             "name": "_limit",
@@ -243,9 +241,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Podcast-episode"
-        ],
+        "tags": ["Podcast-episode"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -310,9 +306,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Podcast-episode"
-        ],
+        "tags": ["Podcast-episode"],
         "parameters": []
       }
     },
@@ -367,9 +361,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Podcast-episode"
-        ],
+        "tags": ["Podcast-episode"],
         "parameters": [
           {
             "name": "id",
@@ -433,9 +425,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Podcast-episode"
-        ],
+        "tags": ["Podcast-episode"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -507,9 +497,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Podcast-episode"
-        ],
+        "tags": ["Podcast-episode"],
         "parameters": [
           {
             "name": "id",
@@ -528,9 +516,7 @@
   "components": {
     "schemas": {
       "Podcast-episode": {
-        "required": [
-          "id"
-        ],
+        "required": ["id"],
         "properties": {
           "id": {
             "type": "string"
@@ -624,9 +610,7 @@
           "companies": {
             "type": "array",
             "items": {
-              "required": [
-                "id"
-              ],
+              "required": ["id"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -636,15 +620,7 @@
                 },
                 "country": {
                   "type": "string",
-                  "enum": [
-                    "SE",
-                    "DK",
-                    "NO",
-                    "FI",
-                    "DE",
-                    "NL",
-                    "ISL"
-                  ]
+                  "enum": ["SE", "DK", "NO", "FI", "DE", "NL", "ISL"]
                 },
                 "name": {
                   "type": "string"
@@ -729,10 +705,7 @@
             }
           },
           "podcast": {
-            "required": [
-              "id",
-              "title"
-            ],
+            "required": ["id", "title"],
             "properties": {
               "id": {
                 "type": "string"

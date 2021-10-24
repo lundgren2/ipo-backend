@@ -50,9 +50,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Companies"
-        ],
+        "tags": ["Companies"],
         "parameters": [
           {
             "name": "_limit",
@@ -238,9 +236,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Companies"
-        ],
+        "tags": ["Companies"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -305,9 +301,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Companies"
-        ],
+        "tags": ["Companies"],
         "parameters": []
       }
     },
@@ -358,9 +352,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Companies"
-        ],
+        "tags": ["Companies"],
         "parameters": [
           {
             "name": "id",
@@ -420,9 +412,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Companies"
-        ],
+        "tags": ["Companies"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -494,9 +484,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Companies"
-        ],
+        "tags": ["Companies"],
         "parameters": [
           {
             "name": "id",
@@ -515,9 +503,7 @@
   "components": {
     "schemas": {
       "Companies": {
-        "required": [
-          "id"
-        ],
+        "required": ["id"],
         "properties": {
           "id": {
             "type": "string"
@@ -591,23 +577,13 @@
           },
           "country": {
             "type": "string",
-            "enum": [
-              "SE",
-              "DK",
-              "NO",
-              "FI",
-              "DE",
-              "NL",
-              "ISL"
-            ]
+            "enum": ["SE", "DK", "NO", "FI", "DE", "NL", "ISL"]
           },
           "name": {
             "type": "string"
           },
           "ipo": {
-            "required": [
-              "id"
-            ],
+            "required": ["id"],
             "properties": {
               "id": {
                 "type": "string"
@@ -650,15 +626,7 @@
               },
               "currency": {
                 "type": "string",
-                "enum": [
-                  "SEK",
-                  "DKK",
-                  "EUR",
-                  "GBP",
-                  "NOK",
-                  "USD",
-                  "ISK"
-                ]
+                "enum": ["SEK", "DKK", "EUR", "GBP", "NOK", "USD", "ISK"]
               },
               "subscription_commitment": {
                 "type": "string"
@@ -701,9 +669,7 @@
           "podcast_episodes": {
             "type": "array",
             "items": {
-              "required": [
-                "id"
-              ],
+              "required": ["id"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -849,9 +815,7 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": [
-                "id"
-              ],
+              "required": ["id"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -877,10 +841,7 @@
           "articles": {
             "type": "array",
             "items": {
-              "required": [
-                "id",
-                "title"
-              ],
+              "required": ["id", "title"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -975,15 +936,7 @@
         "properties": {
           "country": {
             "type": "string",
-            "enum": [
-              "SE",
-              "DK",
-              "NO",
-              "FI",
-              "DE",
-              "NL",
-              "ISL"
-            ]
+            "enum": ["SE", "DK", "NO", "FI", "DE", "NL", "ISL"]
           },
           "name": {
             "type": "string"
@@ -1026,9 +979,7 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": [
-                "id"
-              ],
+              "required": ["id"],
               "properties": {
                 "id": {
                   "type": "string"

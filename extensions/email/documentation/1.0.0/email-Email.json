@@ -51,9 +51,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Email - Email"
-        ],
+        "tags": ["Email - Email"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -122,9 +120,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Email - Email"
-        ],
+        "tags": ["Email - Email"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -193,9 +189,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Email - Email"
-        ],
+        "tags": ["Email - Email"],
         "parameters": []
       }
     }

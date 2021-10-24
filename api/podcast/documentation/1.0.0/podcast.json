@@ -51,9 +51,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Podcast"
-        ],
+        "tags": ["Podcast"],
         "parameters": []
       }
     },
@@ -107,9 +105,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Podcast"
-        ],
+        "tags": ["Podcast"],
         "parameters": [
           {
             "name": "_limit",
@@ -295,9 +291,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Podcast"
-        ],
+        "tags": ["Podcast"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -362,9 +356,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Podcast"
-        ],
+        "tags": ["Podcast"],
         "parameters": []
       }
     },
@@ -415,9 +407,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Podcast"
-        ],
+        "tags": ["Podcast"],
         "parameters": [
           {
             "name": "id",
@@ -477,9 +467,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Podcast"
-        ],
+        "tags": ["Podcast"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -551,9 +539,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Podcast"
-        ],
+        "tags": ["Podcast"],
         "parameters": [
           {
             "name": "id",
@@ -572,10 +558,7 @@
   "components": {
     "schemas": {
       "Podcast": {
-        "required": [
-          "id",
-          "title"
-        ],
+        "required": ["id", "title"],
         "properties": {
           "id": {
             "type": "string"
@@ -659,9 +642,7 @@
           "podcast_episodes": {
             "type": "array",
             "items": {
-              "required": [
-                "id"
-              ],
+              "required": ["id"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -717,9 +698,7 @@
         }
       },
       "NewPodcast": {
-        "required": [
-          "title"
-        ],
+        "required": ["title"],
         "properties": {
           "title": {
             "type": "string"

@@ -51,9 +51,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Upload - File"
-        ],
+        "tags": ["Upload - File"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -122,9 +120,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Upload - File"
-        ],
+        "tags": ["Upload - File"],
         "parameters": []
       }
     },
@@ -179,9 +175,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Upload - File"
-        ],
+        "tags": ["Upload - File"],
         "parameters": []
       }
     },
@@ -236,9 +230,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Upload - File"
-        ],
+        "tags": ["Upload - File"],
         "parameters": [
           {
             "name": "id",
@@ -302,9 +294,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Upload - File"
-        ],
+        "tags": ["Upload - File"],
         "parameters": [
           {
             "name": "id",
@@ -370,9 +360,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Upload - File"
-        ],
+        "tags": ["Upload - File"],
         "parameters": [
           {
             "name": "id",

@@ -50,9 +50,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Tag"
-        ],
+        "tags": ["Tag"],
         "parameters": [
           {
             "name": "_limit",
@@ -238,9 +236,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Tag"
-        ],
+        "tags": ["Tag"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -305,9 +301,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Tag"
-        ],
+        "tags": ["Tag"],
         "parameters": []
       }
     },
@@ -358,9 +352,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Tag"
-        ],
+        "tags": ["Tag"],
         "parameters": [
           {
             "name": "id",
@@ -420,9 +412,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Tag"
-        ],
+        "tags": ["Tag"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -494,9 +484,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Tag"
-        ],
+        "tags": ["Tag"],
         "parameters": [
           {
             "name": "id",
@@ -515,9 +503,7 @@
   "components": {
     "schemas": {
       "Tag": {
-        "required": [
-          "id"
-        ],
+        "required": ["id"],
         "properties": {
           "id": {
             "type": "string"
@@ -531,9 +517,7 @@
           "pages": {
             "type": "array",
             "items": {
-              "required": [
-                "id"
-              ],
+              "required": ["id"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -577,10 +561,7 @@
           "articles": {
             "type": "array",
             "items": {
-              "required": [
-                "id",
-                "title"
-              ],
+              "required": ["id", "title"],
               "properties": {
                 "id": {
                   "type": "string"
