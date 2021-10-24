@@ -1,2 +1,4 @@
 .cache
 build
+package.json
+full_documentation.json
