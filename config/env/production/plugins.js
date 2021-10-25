@@ -1,7 +1,15 @@
+const version = require('./package.json').version;
+
+// Add Sentry DSN from: https://sentry.io/settings/ipo-se/projects/backend/keys/
+const SENTRY_DSN =
+  'https://f091ea00b30c4368b807caf475404bc0@o473428.ingest.sentry.io/5936188';
+
 module.exports = ({env}) => ({
   sentry: {
-    // Add Sentry DSN from: https://sentry.io/settings/ipo-se/projects/backend/keys/
-    dsn: 'https://f091ea00b30c4368b807caf475404bc0@o473428.ingest.sentry.io/5936188',
+    dsn: env('NODE_ENV') === 'production' ? SENTRY_DSN : null,
+    init: {
+      release: `@sentry/browser@${version}`,
+    },
   },
   upload: {
     provider: 'do',

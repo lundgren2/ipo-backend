@@ -1,13 +1,13 @@
 {
   "name": "ipo-se-backend",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Strapi application",
   "scripts": {
     "dev": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "format": "prettier --write .",
+    "format": "prettier --write ./*.{js,json}",
     "prettier": "prettier . --check",
     "strapi": "strapi",
     "prepare": "husky install"
