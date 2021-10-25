@@ -1,4 +1,4 @@
-const version = require('./package.json').version;
+const version = require('../../../package.json').version;
 
 // Add Sentry DSN from: https://sentry.io/settings/ipo-se/projects/backend/keys/
 const SENTRY_DSN =

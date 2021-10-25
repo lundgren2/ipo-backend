@@ -8,7 +8,7 @@
     "start": "strapi start",
     "build": "strapi build",
     "format": "prettier --write ./*.{js,json}",
-    "prettier": "prettier . --check",
+    "prettier": "prettier ./*.{js,json} --check",
     "strapi": "strapi",
     "prepare": "husky install"
   },
