@@ -17,7 +17,11 @@
     "cover": {
       "model": "file",
       "via": "related",
-      "allowedTypes": ["images", "files", "videos"],
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
       "plugin": "upload",
       "required": false
     },
@@ -28,8 +32,8 @@
       "type": "text"
     },
     "podcast_episodes": {
-      "collection": "podcast-episode",
-      "via": "podcast"
+      "via": "podcast",
+      "collection": "podcast-episode"
     },
     "cover_url": {
       "type": "string"

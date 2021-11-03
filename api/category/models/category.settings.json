@@ -19,8 +19,8 @@
     },
     "articles": {
       "via": "categories",
-      "collection": "article",
-      "autoPopulate": false
+      "autoPopulate": false,
+      "collection": "article"
     }
   }
 }

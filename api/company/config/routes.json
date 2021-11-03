@@ -3,7 +3,7 @@
     {
       "method": "GET",
       "path": "/companies",
-      "handler": "companies.find",
+      "handler": "company.find",
       "config": {
         "policies": []
       }
@@ -11,7 +11,7 @@
     {
       "method": "GET",
       "path": "/companies/count",
-      "handler": "companies.count",
+      "handler": "company.count",
       "config": {
         "policies": []
       }
@@ -19,7 +19,7 @@
     {
       "method": "GET",
       "path": "/companies/:id",
-      "handler": "companies.findOne",
+      "handler": "company.findOne",
       "config": {
         "policies": []
       }
@@ -27,7 +27,7 @@
     {
       "method": "POST",
       "path": "/companies",
-      "handler": "companies.create",
+      "handler": "company.create",
       "config": {
         "policies": []
       }
@@ -35,7 +35,7 @@
     {
       "method": "PUT",
       "path": "/companies/:id",
-      "handler": "companies.update",
+      "handler": "company.update",
       "config": {
         "policies": []
       }
@@ -43,7 +43,7 @@
     {
       "method": "DELETE",
       "path": "/companies/:id",
-      "handler": "companies.delete",
+      "handler": "company.delete",
       "config": {
         "policies": []
       }
