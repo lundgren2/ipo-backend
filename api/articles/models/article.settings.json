@@ -24,7 +24,9 @@
       "dominant": true
     },
     "slug": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "excerpt": {
       "type": "text"
@@ -34,7 +36,8 @@
       "model": "user"
     },
     "date": {
-      "type": "datetime"
+      "type": "datetime",
+      "required": true
     },
     "wp_id": {
       "type": "integer"
@@ -53,7 +56,8 @@
       "dominant": true
     },
     "source": {
-      "type": "string"
+      "type": "string",
+      "default": "ipo.se"
     },
     "article_url": {
       "type": "string"
@@ -68,7 +72,8 @@
     },
     "companies": {
       "via": "articles",
-      "collection": "companies"
+      "collection": "company",
+      "dominant": true
     },
     "sponsored": {
       "type": "boolean"

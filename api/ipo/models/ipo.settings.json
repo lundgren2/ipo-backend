@@ -68,7 +68,7 @@
     },
     "company": {
       "via": "ipo",
-      "model": "companies"
+      "model": "company"
     },
     "featured": {
       "type": "boolean"

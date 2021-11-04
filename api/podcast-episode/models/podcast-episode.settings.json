@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "podcast_episodes",
+  "collectionName": "podcast-episodes",
   "info": {
     "name": "Podcast Episode",
     "description": ""
@@ -25,7 +25,8 @@
       "via": "related",
       "allowedTypes": ["images"],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {}
     },
     "description": {
       "type": "richtext"
@@ -38,7 +39,7 @@
     },
     "companies": {
       "via": "podcast_episodes",
-      "collection": "companies"
+      "collection": "company"
     },
     "podcast": {
       "via": "podcast_episodes",
