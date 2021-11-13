@@ -32,12 +32,12 @@ module.exports = {
   lifecycles: {
     async beforeCreate(data) {
       if (data.title) {
-        data.slug = await getUniqueSlug(data.title);
+        data.slug = await getUniqueSlug(data.slug || data.title);
       }
     },
     async beforeUpdate(params, data) {
       if (data.title) {
-        data.slug = await getUniqueSlug(data.title);
+        data.slug = await getUniqueSlug(data.slug || data.title);
       }
     },
   },
