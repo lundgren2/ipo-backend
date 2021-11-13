@@ -87,6 +87,10 @@
     },
     "post_money": {
       "type": "decimal"
+    },
+    "cancelled": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
