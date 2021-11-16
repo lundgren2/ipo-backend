@@ -2,14 +2,15 @@
   "collectionName": "components_link_links",
   "info": {
     "name": "Link",
-    "icon": "link"
+    "icon": "link",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
     },
-    "href": {
+    "url": {
       "type": "string"
     }
   }
