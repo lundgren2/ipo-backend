@@ -42,7 +42,7 @@ function getCoverUrl(data) {
   // TODO: Fix upload image (buffersize is removed)
   // const [{ id: fileId }] = await strapi.config.functions.upload(downloaded);
 
-  return data.image.url._text;
+  return data.image.url ? data.image.url._text : '';
 }
 
 function parseDescription(unformattedDescription, delimiter) {
@@ -114,8 +114,8 @@ async function parseEpisodes(episodes, podcastId) {
 
     const podcastEpisode = {
       title,
-      slug: slugify(title),
-      summary: episode['itunes:subtitle']._text,
+      slug: slugify(title || ''),
+      summary: episode['itunes:subtitle'] && episode['itunes:subtitle']._text,
       date: new Date(episode.pubDate._text),
       description: parseDescription(episode.description._cdata, '---'),
       link: episode.link._text,
