@@ -79,7 +79,8 @@
       "type": "boolean"
     },
     "featured": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "media": {
       "collection": "file",
