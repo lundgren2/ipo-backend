@@ -91,6 +91,14 @@
     "cancelled": {
       "type": "boolean",
       "default": false
+    },
+    "nordnet_link": {
+      "type": "string",
+      "default": "https://www.nordnet.se/foretagshandelser"
+    },
+    "avanza_link": {
+      "type": "string",
+      "default": "https://www.avanza.se/borsintroduktioner-emissioner.html"
     }
   }
 }
