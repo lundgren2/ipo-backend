@@ -36,7 +36,9 @@ module.exports = {
       }
     },
     async beforeUpdate(params, data) {
-      if (data.title) {
+      const {id} = params;
+      const existing = await strapi.query('article').findOne({id});
+      if (existing.slug !== data.slug && data.title) {
         data.slug = await getUniqueSlug(data.slug || data.title);
       }
     },
