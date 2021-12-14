@@ -52,10 +52,6 @@
       "required": false,
       "pluginOptions": {}
     },
-    "subscribe_buttons": {
-      "type": "boolean",
-      "default": true
-    },
     "currency": {
       "type": "enumeration",
       "enum": ["SEK", "DKK", "EUR", "GBP", "NOK", "USD", "ISK"]
@@ -92,13 +88,20 @@
       "type": "boolean",
       "default": false
     },
+    "avanza_link": {
+      "type": "string",
+      "default": "https://www.avanza.se/borsintroduktioner-emissioner.html"
+    },
     "nordnet_link": {
       "type": "string",
       "default": "https://www.nordnet.se/foretagshandelser"
     },
-    "avanza_link": {
+    "other_subscribe": {
+      "type": "string"
+    },
+    "other_subscribe_text": {
       "type": "string",
-      "default": "https://www.avanza.se/borsintroduktioner-emissioner.html"
+      "default": "Teckna här"
     }
   }
 }
