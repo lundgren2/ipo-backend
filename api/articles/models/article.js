@@ -1,6 +1,7 @@
 'use strict';
 
 const slugify = require('slugify');
+const generateEmbedIframeFromUrl = require('../../../lib/generateEmbedIframe');
 
 // https://www.gyanblog.com/javascript/strapi-nice-url-slug-configuration-seo/#generate-unique-slug-for-article
 const getUniqueSlug = async (title, num = 0) => {
@@ -34,12 +35,20 @@ module.exports = {
       if (data.title) {
         data.slug = await getUniqueSlug(data.slug || data.title);
       }
+      // Replace URL with embed iframe
+      if (data.body) {
+        data.body = generateEmbedIframeFromUrl(data.body);
+      }
     },
     async beforeUpdate(params, data) {
       const {id} = params;
       const existing = await strapi.query('article').findOne({id});
       if (existing.slug !== data.slug && data.title) {
         data.slug = await getUniqueSlug(data.slug || data.title);
+      }
+      // Replace URL with embed iframe
+      if (data.body) {
+        data.body = generateEmbedIframeFromUrl(data.body);
       }
     },
   },

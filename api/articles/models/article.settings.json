@@ -76,7 +76,8 @@
       "dominant": true
     },
     "sponsored": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "featured": {
       "type": "boolean",
